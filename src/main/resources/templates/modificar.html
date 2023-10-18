@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Datos Persona</title>
+	<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container">
+	<h1>Datos Persona</h1>
+	<a th:href="@{/}">Inicio</a>
+	<br>
+	
+	<form th:action="@{/guardar}" method="post" th:object="${persona}">
+		<input type="hidden" name="id_persona" th:field="*{id_persona}">
+		
+		<label for="nombre">Nombre</label>
+		<input type="text" name="nombre" th:field="*{nombre}">
+		<br>
+		
+		<label for="nombre">Apellido</label>
+		<input type="text" name="apellido" th:field="*{apellido}">
+		<br>
+		
+		<label for="nombre">Email</label>
+		<input type="text" name="email" th:field="*{email}">
+		<br>
+		
+		<label for="nombre">Telefono</label>
+		<input type="text" name="telefono" th:field="*{telefono}">
+		<br>
+		<input type="submit" name="guardar" value="Guardar">
+	</form>
+	
+	
+
+
+</div>
+</body>
+<script crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
