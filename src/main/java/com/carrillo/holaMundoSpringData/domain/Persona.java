@@ -1,6 +1,8 @@
 package com.carrillo.holaMundoSpringData.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.io.Serial;
@@ -16,11 +18,14 @@ public class Persona implements Serializable {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_persona;
+    @NotEmpty
     private String nombre;
+    @NotEmpty
     private String apellido;
+    @NotEmpty
     private String email;
-    private String telefono;
 
+    private String telefono;
 
 
 }

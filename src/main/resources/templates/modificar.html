@@ -10,7 +10,8 @@
 
 
 <div class="container">
-	<h1>Datos Persona</h1>
+	<header th:replace="layaut/plantilla :: header"></header>
+	<h2>Datos Persona</h2>
 	<a th:href="@{/}">Inicio</a>
 	<br>
 	
@@ -26,7 +27,7 @@
 		<br>
 		
 		<label for="nombre">Email</label>
-		<input type="text" name="email" th:field="*{email}">
+		<input type="email" name="email" th:field="*{email}">
 		<br>
 		
 		<label for="nombre">Telefono</label>
@@ -36,8 +37,8 @@
 	</form>
 	
 	
-
-
+	
+	<footer th:replace="layaut/plantilla :: footer"></footer>
 </div>
 </body>
 <script crossorigin="anonymous"
